@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {    
+@media screen and (max-width: 414px) {    
     .input-search-button {
         margin-top: 27px;
     }
@@ -23,7 +23,7 @@
     }
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {    
+@media screen and (min-width: 415px) and (max-width: 768px) {    
     .input-search-button {
         margin-top: 32px;
     }
