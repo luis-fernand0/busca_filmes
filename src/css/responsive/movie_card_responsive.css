@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
     .card-complet {
         margin-top: 0;
     }
@@ -190,7 +190,7 @@
     }
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 415px) and (max-width: 768px) {
     .card-complet {
         margin-top: 0;
     }
