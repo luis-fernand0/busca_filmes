@@ -1,0 +1,399 @@
+@media screen and (max-width: 375px) {
+    .card-complet {
+        margin-top: 0;
+    }
+
+    .movie {
+        padding: 25px 15px 54px 15px;
+        margin: 21px;
+
+        width: 320px;
+        height: auto;
+    }
+
+    .poster-trailer-overview {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        display: grid;
+    }
+
+    .movie-poster {
+        order: 1;
+
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+
+        width: 140px;
+        height: 207.5px;
+    }
+
+    .movie-trailer,
+    .trailer-error {
+        order: 3;
+
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
+
+        width: 273px;
+        height: 162px;
+
+        margin-left: 0px;
+    }
+
+    .overview {
+        order: 2;
+
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 1;
+
+        overflow: auto;
+
+        max-width: 140px;
+        min-height: 207px;
+        max-height: 207px;
+
+        margin: 0 0 30px 22px;
+
+        font-size: 12px;
+    }
+
+    .stars-and-time {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 12px;
+    }
+
+    .text {
+        margin-right: 15px;
+        font-size: 15px;
+    }
+
+    .stars,
+    .time {
+        width: 20px;
+        height: 20px;
+
+        margin-right: 5px;
+    }
+
+    .movie-genres {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        width: 285px;
+        max-height: auto;
+    }
+
+    .genres {
+        padding: 4px;
+
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+
+        margin-right: 10px;
+
+        width: 82px;
+        height: 25px;
+    }
+
+    .title-and-elenco {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .elenco {
+        order: 2;
+
+        overflow: auto;
+
+        width: 265px;
+
+        margin: 23px 0 0 0;
+    }
+
+    .titles {
+        order: 1;
+    }
+
+    .title-elenco {
+        font-size: 14px;
+
+        width: auto;
+        max-height: 23px;
+
+        margin-bottom: 20px;
+        padding: 3px 25px;
+    }
+
+    .title-stars {
+        font-size: 13px;
+
+        width: 50%;
+        max-height: 40px;
+
+        padding: 3px;
+    }
+
+    .actors-list {
+        display: flex;
+        flex-flow: row nowrap;
+
+        margin-bottom: 23px;
+    }
+
+    .actor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border: 11px solid #858585;
+        border-radius: 5px;
+
+        background-color: #858585;
+
+        margin: 5px;
+    }
+
+    .img-actor {
+        width: 100px;
+        height: 150px;
+
+        margin-bottom: 12px;
+    }
+
+    .actor-name {
+        font-size: 17px;
+
+        min-width: 100px;
+    }
+
+    .title-streaming {
+        width: 100%;
+
+        padding: 3px;
+
+        font-size: 15px;
+    }
+
+    .streaming-logo {
+        width: 25px;
+        height: 25px;
+
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .card-complet {
+        margin-top: 0;
+    }
+
+    .movie {
+        padding: 43px 0px 25px 25px;
+
+        width: 700px;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 205px 190px 210px;
+        grid-template-rows: 230px 62px 100px 66px 280px;
+        gap: 29px;
+        row-gap: 0;
+    }
+
+    .poster-trailer-overview {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+
+        display: grid;
+        grid-template-columns: 205px 400px;
+        grid-template-rows: 230px 62px 205px;
+        gap: 29px;
+        row-gap: 0;
+    }
+
+    .movie-poster {
+        width: 205px;
+        height: 292px;
+
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+    }
+
+    .movie-trailer,
+    .trailer-error {
+        width: 400px;
+        height: 230px;
+
+        margin-left: 0;
+
+        text-align: center;
+
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .overview {
+        overflow: auto;
+
+        max-width: 205px;
+        max-height: 170px;
+
+        margin: 19px 0 0 0;
+
+        font-size: 16px;
+        text-align: center;
+
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 5;
+    }
+
+    .stars-and-time {
+        margin-top: 0px;
+
+        width: 190px;
+        height: 62px;
+
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+
+    .text {
+        margin:12px 15px 0 0;
+
+        font-size: 15px;
+    }
+
+    .stars,
+    .time {
+        width: 20px;
+        height: 20px;
+
+        margin-right: 5px;
+    }
+    
+    .title-and-elenco{
+        grid-column: 1;
+        grid-row: 1 / span 3;
+
+        display: grid;
+        grid-template-columns: 205px 190px 210px;
+        grid-template-rows: 230px 62px 50px 66px 66px 280px;
+        gap: 29px;
+        row-gap: 0;
+    }
+
+    .title-streaming {
+        display: none;
+    }
+
+    .streaming {
+        display: flex;
+        align-items: flex-end;
+
+        margin: 0;
+        
+        width: 180px;
+        height: 62px;
+
+        grid-column: 3;
+        grid-row: 2 ;
+    }
+    
+    .streaming-logo {
+        margin: 12px 0 0 0;
+
+        width: 35px;
+        height: 35px;
+    }
+    
+    .movie-genres {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        
+        max-width: 400px;
+        height: auto;
+        min-height: 25px;
+        
+        grid-column: 2 / 3;
+        grid-row: 3 / span 1;
+    }
+
+    .genres {
+        padding: 4px 10px;
+
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+
+        margin: 0 10px 0 0;
+
+        width: auto;
+        min-width: 82px;
+        height: 25px;
+    }
+
+    .elenco {
+        overflow: auto;
+
+        width: 400px;
+        height: 280px;
+
+        margin: 0;
+
+        grid-column: 2 / span 3;
+        grid-row: 6 / span 5;
+    }
+
+    .titles {
+        width: 224px;
+        height: 66px;
+
+        grid-column: 2;
+        grid-row: 5 / span 4;
+    }
+
+    .title-elenco {
+        font-size: 14px;
+        
+        width: 115px;
+
+        margin-bottom: 5px;
+        padding: 3px 25px;
+    }
+
+    .title-stars {
+        font-size: 15px;
+        text-align: left;
+
+        background-color: transparent;
+    }
+
+    .actors-list {
+        margin-bottom: 0px;
+    }
+
+    .actor {
+        margin: 5px;
+    }
+
+    .img-actor {
+        width: 100px;
+        height: 150px;
+    }
+
+    .actor-name {
+        font-size: 17px;
+
+        min-width: 100px;
+    }
+
+}

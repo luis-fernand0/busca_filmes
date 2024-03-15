@@ -1,0 +1,49 @@
+@media screen and (max-width: 375px) {    
+    .input-search-button {
+        margin-top: 27px;
+    }
+
+    .input {
+       width: 195px; 
+       height: 24px;
+
+       font-size: 11px;
+
+       margin-right: 9px;
+    }
+    
+    .button-search {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .icon-search {
+        width: 10px; 
+        height: 12px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {    
+    .input-search-button {
+        margin-top: 32px;
+    }
+
+    .input {
+       width: 300px; 
+       height: 28px;
+
+       font-size: 14px;
+
+       margin-right: 14px;
+    }
+    
+    .button-search {
+        width: 29px;
+        height: 29px;
+    }
+    
+    .icon-search {
+        width: 14px; 
+        height: 15px;
+    }
+}

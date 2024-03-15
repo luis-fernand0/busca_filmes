@@ -1,0 +1,84 @@
+@media screen and (max-width: 375px) {
+    .cards {
+        margin-top: 15px;
+    }
+    
+    .movies-cards {
+        padding: 10px 0 10px 0;
+        margin: 10px;
+
+        width: 157px;        
+    }
+    
+    .poster {
+        width: 140px;
+        height: 207.5px;
+    }
+    
+    .movie-name-and-stars {
+        margin-top: 10px;
+
+        width: 140px;
+    }
+
+    .movies-cards .movie-name-and-stars .text {
+        font-size: 12px;
+        max-width: 140px;
+    }
+
+    .movies-cards .movie-name-and-stars .text .stars {
+        width: 15px;
+        height: 14px;
+    }
+    
+    .btn-detalhes {
+        font-size: 13px;
+
+        width: 140px;
+        height: 20px;
+
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .cards {
+        margin-top: 15px;
+    }
+    
+    .movies-cards {
+        padding: 13px;
+        margin: 0 10px 18px;
+
+        width: 230px;        
+    }
+    
+    .poster {
+        width: 205px;
+        height: 292px;
+    }
+    
+    .movie-name-and-stars {
+        margin-top: 10px;
+    
+        width: 205px;
+    }
+    
+    .movies-cards .movie-name-and-stars .text {
+        margin: 0;
+        
+        font-size: 15px;
+
+        width: 205px;
+    }
+    
+    
+    .btn-detalhes {
+        font-size: 15px;
+
+        width: 205px;
+        height: 28px;
+
+        margin-top: 32px;
+    }
+}

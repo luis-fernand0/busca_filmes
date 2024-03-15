@@ -1,0 +1,54 @@
+header {
+    background-color: #232020;
+
+    height: 105px;    
+}
+
+.icon-titulo {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    background: #B33636;
+
+    width: 350px;
+    height: 70px;
+
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 18px 0 18px 0;
+}
+
+h1:hover {
+    background-color: #232020;
+
+    border: solid 1px #B33636;
+
+    transition: 0.3s;
+}
+
+
+.icon-video {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 80px;
+    height: 45px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}

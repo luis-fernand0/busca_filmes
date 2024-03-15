@@ -1,0 +1,75 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+.movies-cards {
+    background-color: #232020;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 320px;
+    height: auto;
+
+    padding: 20px 0 20px 0;
+
+    margin: 40px ;
+}
+
+.poster {
+    width: 280px;
+    height: 415px;
+}
+
+.movie-name-and-stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 39px;
+
+    width: 280px;
+}
+
+.text {
+    color: white;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text.stars {
+    width: 280px;
+}
+
+.btn-detalhes {
+    background-color: #B33636;
+
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+
+    width: 250px;
+    height: 50px;
+
+    margin-top: 39px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn-detalhes:hover {
+    background-color: #232020;
+
+    border: solid 1px #B33636;
+
+    transition: 0.3s;
+}
