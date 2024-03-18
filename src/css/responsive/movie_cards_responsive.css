@@ -1,4 +1,4 @@
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
     .cards {
         margin-top: 15px;
     }
@@ -41,7 +41,7 @@
     }
 }
 
-@media screen and (min-width: 415px) and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
     .cards {
         margin-top: 15px;
     }

@@ -35,8 +35,10 @@ function Search() {
       <ul className='cards'>
         {filme && filme.map((movie) =>
           <li className='movies-cards ' key={movie.id}>
-            <img className='poster' src={`${apiImg}${movie.poster_path}`}
+            <Link to={`/movie/${movie.id}`}>
+              <img className='poster' src={`${apiImg}${movie.poster_path}`}
               alt={`${movie.title} poster`} />
+            </Link>
 
             <div className='movie-name-and-stars'>
               <p className='text movie-name'> {movie.title} </p>

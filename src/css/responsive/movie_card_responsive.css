@@ -1,4 +1,4 @@
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
     .card-complet {
         margin-top: 0;
     }
@@ -25,7 +25,8 @@
         grid-column: 1 / span 1;
         grid-row: 1 / span 2;
 
-        width: 140px;
+        min-width: 140px;
+        max-width: 140px;
         height: 207.5px;
     }
 
@@ -36,7 +37,8 @@
         grid-column: 1 / span 2;
         grid-row: 2 / span 2;
 
-        width: 273px;
+        min-width: 273px;
+        max-width: 273px;
         height: 162px;
 
         margin-left: 0px;
@@ -190,7 +192,7 @@
     }
 }
 
-@media screen and (min-width: 415px) and (max-width: 768px) {
+@media screen and (min-width: 501px) and (max-width: 1024px) {
     .card-complet {
         margin-top: 0;
     }
@@ -220,7 +222,8 @@
     }
 
     .movie-poster {
-        width: 205px;
+        min-width: 205px;
+        max-width: 205px;
         height: 292px;
 
         grid-column: 1 / span 1;
@@ -229,7 +232,8 @@
 
     .movie-trailer,
     .trailer-error {
-        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
         height: 230px;
 
         margin-left: 0;

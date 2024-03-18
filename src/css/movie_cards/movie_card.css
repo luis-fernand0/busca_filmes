@@ -30,12 +30,14 @@
 }
 
 .movie-poster {
-    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
     height: 415px;
 }
 
 .movie-trailer {
-    width: 740px;
+    min-width: 740px;
+    max-width: 740px;
     height: 415px;
 
     border: none;
@@ -48,13 +50,15 @@
     align-items: center;
     justify-content: center;
     
-    width: 740px;
+    min-width: 740px;
     height: 415px;
 
     margin-left: 30px;
 }
 
 .overview {
+    overflow: auto;
+
     max-width: 391px;
     max-height: 415px;
 
