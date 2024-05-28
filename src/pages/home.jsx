@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
@@ -13,10 +13,15 @@ const apiImg = import.meta.env.VITE_IMG
 
 const Home = () => {
 
-  const [topMovies, setTopMovies] = useState() 
+  const [searchParams] = useSearchParams([])
+  const [topMovies, setTopMovies] = useState()
+
+  const page = searchParams.get('page')
+  console.log(page)
+
 
   async function Filmes () {
-    const url = `${urlMovies}top_rated?${apiKey}&language=pt-BR`
+    const url = `${urlMovies}top_rated?${apiKey}&page=${page}?&language=pt-BR`
     const response = await fetch(url)
     const data = await response.json()
     
@@ -25,7 +30,7 @@ const Home = () => {
 
   useEffect(() => {
     Filmes()
-  }, [])
+  }, [page])
 
   return (
     <>
@@ -39,7 +44,9 @@ const Home = () => {
             </Link>
 
             <div className='movie-name-and-stars'>
-              <p className='text movie-name'> {movie.title} </p>
+              <Link to={`/movie/${movie.id}`}>
+                <p className='text movie-name'> {movie.title} </p>
+              </Link>
 
               <p className='text'>
                 <FontAwesomeIcon className='stars' icon={faStar} style={{color: "#D0C80A"}} /> 

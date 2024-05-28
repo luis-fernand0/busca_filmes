@@ -24,6 +24,7 @@ function Search() {
     const data = await response.json()
     
     setFilme(data.results)
+    console.log(data)
   }
 
   useEffect(() => {
@@ -34,15 +35,17 @@ function Search() {
     <div>
       <ul className='cards'>
         {filme && filme.map((movie) =>
-          <li className='movies-cards ' key={movie.id}>
+          <li className='movies-cards' key={movie.id}>
             <Link to={`/movie/${movie.id}`}>
               <img className='poster' src={`${apiImg}${movie.poster_path}`}
               alt={`${movie.title} poster`} />
             </Link>
 
             <div className='movie-name-and-stars'>
-              <p className='text movie-name'> {movie.title} </p>
-
+              <Link>
+                <p className='text movie-name'> {movie.title} </p>
+              </Link>
+            
               <p className='text stars'>
                 <FontAwesomeIcon icon={faStar} style={{ color: "#D0C80A" }}/>
                 {(movie.vote_average) && (movie.vote_average).toFixed(2)}
