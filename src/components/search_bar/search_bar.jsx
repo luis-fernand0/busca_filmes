@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -9,13 +9,14 @@ import './search_bar_responsive.css'
 
 const SearchBar = () => {
     const [search, setSearch] = useState("")
+    const [searchParams, setSearchParams] = useSearchParams([])
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
         
         if (!search) return
-
+        
         navigate(`search?query=${search}`)
         setSearch('')
     }

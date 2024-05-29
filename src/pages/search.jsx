@@ -6,6 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 import '../css/movie_cards/movie_cards.css'
 import '../css/responsive/movie_cards_responsive.css'
+import BtnPages from '../components/paginas/pages'
 
 const apiKey = import.meta.env.VITE_API_KEY
 const apiImg = import.meta.env.VITE_IMG
@@ -13,23 +14,23 @@ const apiSearch = import.meta.env.VITE_SEARCH
 
 function Search() {
 
-  const [searchParams] = useSearchParams([])
+  const [searchParams, setSearchParams] = useSearchParams()
   const [filme, setFilme] = useState([])
 
   const query = searchParams.get(`query`)
+  const page = searchParams.get(`page`)
 
   async function Filme() {
-    const url = `${apiSearch}?query=${query}&${apiKey}&language=pt-BR&append_to_response=videos,images`
+    const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
     
     setFilme(data.results)
-    console.log(data)
   }
 
   useEffect(() => {
     Filme()
-  }, [query])
+  }, [query, page])
 
   return (
     <div>
@@ -58,6 +59,8 @@ function Search() {
           </li>
         )}
       </ul>
+
+      <BtnPages/>
     </div>
   )
 }
