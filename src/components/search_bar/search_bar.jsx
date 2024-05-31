@@ -12,12 +12,14 @@ const SearchBar = () => {
     const [searchParams, setSearchParams] = useSearchParams([])
     const navigate = useNavigate()
 
+    const page = searchParams.get(`page`)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         
         if (!search) return
         
-        navigate(`search?query=${search}`)
+        navigate(`search?query=${search}&page=${page}`)
         setSearch('')
     }
 

@@ -21,6 +21,7 @@ const Home = () => {
   const page = searchParams.get('page')
 
   async function Filmes () {
+    if (page === null) return
     const url = `${urlMovies}top_rated?${apiKey}&page=${page}?&language=pt-BR`
     const response = await fetch(url)
     const data = await response.json()

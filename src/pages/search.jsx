@@ -14,11 +14,11 @@ const apiSearch = import.meta.env.VITE_SEARCH
 
 function Search() {
 
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const [filme, setFilme] = useState([])
 
-  const query = searchParams.get(`query`)
   const page = searchParams.get(`page`)
+  const query = searchParams.get(`query`)
 
   async function Filme() {
     const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`

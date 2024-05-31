@@ -6,14 +6,23 @@ const BtnPages = () => {
     const [searchParams, setSearchParams] = useSearchParams([])
     const [page, setPage] = useState(1)
 
+    
+
     function AtulizarPage () {
         const params = new URLSearchParams(searchParams)
         const obterquery = params.get(`query`)
 
-        params.set(`page`, `${page}`)
-        params.set(`query`, `${obterquery}`)
+        if (!searchParams.has(`page`) || searchParams.get(`page`) === null) {
+            params.set(`page`, `${page}`)
+            params.set(`query`, `${obterquery}`)
+            setSearchParams(params)
+        }
 
-        setSearchParams(params)
+        else {
+            params.set(`page`, `${page}`)
+            params.set(`query`, `${obterquery}`)
+            setSearchParams(params)
+        }
     }
 
     useEffect (() => {
