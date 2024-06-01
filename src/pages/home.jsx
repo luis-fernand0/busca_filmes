@@ -15,11 +15,23 @@ const apiImg = import.meta.env.VITE_IMG
 
 const Home = () => {
 
-  const [searchParams] = useSearchParams([])
+  const [searchParams, setSearchParams] = useSearchParams([])
   const [topMovies, setTopMovies] = useState()
+  const [totalPages, setTotalPages] = useState()
 
   const page = searchParams.get('page')
 
+  function AppendUrl (totpage) {
+    /*
+    ESSA FUNÇÃO ADICIONA UM NOVO PARAMENTRO NA URL DO BROWSER ASSIM PODEMOS LER
+    DINAMICAMENTE QUANTAS PAGINAS TEM CADA SETOR, POR EXEMPLO QUANTAS PAGINAS TEM O TOP RATED OU POPULAR FILMS
+    */
+    const params = new URLSearchParams(searchParams)
+    if (totpage === undefined) return //VERIFICAMOS SE TOTPAGE ESTÁ UNDEFINED OU NÃO SE TIVER ELE VAI ESPERAR ATÉ QUE A FUNÇÃO FILMES RESPONDA
+    params.set(`total_pages`, `${totpage}`)
+    setSearchParams(params)
+  }
+  
   async function Filmes () {
     if (page === null) return
     const url = `${urlMovies}top_rated?${apiKey}&page=${page}?&language=pt-BR`
@@ -27,10 +39,12 @@ const Home = () => {
     const data = await response.json()
     
     setTopMovies(data.results)
+    setTotalPages(data)
   }
 
   useEffect(() => {
     Filmes()
+    AppendUrl(totalPages && totalPages.total_pages) // GARANTINDO QUE TOTALPAGES NÃO SEJA UNDEFINED
   },[page])
 
   return (
