@@ -1,0 +1,24 @@
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+.btn {
+    margin-top: 0;
+}
+
+.btn-voltar {
+    margin-right: 100px;
+}
+
+.btn-prox {
+    margin-left: 100px;
+}
+
+.texto-pages {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
