@@ -14,7 +14,7 @@ const Header = () => {
                 </div>
 
                 <div className='titulo'>
-                    <Link to='/'><h1>BUSCA FILMES</h1></Link>
+                    <Link to='/'><h1 className='title'>BUSCA FILMES</h1></Link>
                 </div>
 
                 <div></div>

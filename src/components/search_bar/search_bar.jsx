@@ -18,7 +18,7 @@ const SearchBar = () => {
         
         if (!search) return
         
-        navigate(`search?query=${search}`)
+        navigate(`search?query=${search}&page=1`)
         setSearch('')
     }
 

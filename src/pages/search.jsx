@@ -39,6 +39,8 @@ function Search() {
 
   return (
     <>
+      <h1 className='names-titles'>Titulos com nome: {query}</h1>
+
       <Cards movies={filme}/>
 
       <BtnPages/>

@@ -52,7 +52,7 @@ const BtnPages = () => {
     return (
         <>
             <div className='btns'>
-                <button className='btn btn-voltar' onClick={() => {verificarVoltarPage(page - 1)}}>VOLTAR PAGE</button>
+                <button className='btn btn-voltar' onClick={() => {verificarVoltarPage(page - 1)}}>VOLTAR PAG</button>
 
                 <p className='texto-pages'>{page}...{totalPages}</p>
 

@@ -22,6 +22,7 @@ const Movie = () => {
     const url = `${urlMovies}${id}?${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
+    console.log(data)
 
     setFilme(data)
   }
@@ -54,7 +55,12 @@ const Movie = () => {
 
         <div className='movie scroll'>
           <div className='poster-trailer-overview'>
-            <img className='movie-poster' src={`${apiImg}${filme.poster_path}`} alt={`${filme.title} poster`} />
+
+            <div className='poster-title'>
+              <img className='movie-poster' src={`${apiImg}${filme.poster_path}`} alt={`${filme.title} poster`} />
+
+              <p className='title-movie'>{filme.title}</p>
+            </div>
 
             {filme.videos.results.length === 0 && <p className='trailer-error'>NO MOMENTO O FILME SE ENCONTRA SEM TRAILER... </p>}
             {filme.videos.results.length > 0 && <iframe className='movie-trailer' src={`https://www.youtube.com/embed/${filme.videos.results[0].key}`} width={`740px`} height={`415px`}></iframe>}

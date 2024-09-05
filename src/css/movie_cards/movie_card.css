@@ -35,6 +35,14 @@
     height: 415px;
 }
 
+.title-movie {
+    margin-top: 15px;
+
+    max-width: 740px;
+
+    font-weight: 700;
+}
+
 .movie-trailer {
     min-width: 740px;
     max-width: 740px;
