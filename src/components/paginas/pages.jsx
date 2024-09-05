@@ -32,8 +32,8 @@ const BtnPages = () => {
         const obterquery = params.get(`query`)
 
         if (!searchParams.has(`page`) || searchParams.get(`page`) === null) {
-            params.set(`page`, `${page}`)
             params.set(`query`, `${obterquery}`)
+            params.set(`page`, `${page}`)
             params.set(`total_pages`, `${totalPages}`)
             setSearchParams(params)
         }

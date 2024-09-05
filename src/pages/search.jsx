@@ -12,6 +12,9 @@ function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [filme, setFilme] = useState([])
 
+  const page = searchParams.get(`page`)
+  const query = searchParams.get(`query`)
+
   function AppendUrl (totpage) {
     const params = new URLSearchParams(searchParams)
     if (totpage === undefined) return
@@ -19,15 +22,12 @@ function Search() {
     setSearchParams(params)
   }
 
-  const page = searchParams.get(`page`)
-  const query = searchParams.get(`query`)
 
   async function Filme() {
     if (page === null) return
     const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(query)
     
     setFilme(data.results)
     AppendUrl(data.total_pages)
