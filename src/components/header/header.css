@@ -9,7 +9,7 @@ header {
     align-items: center;
 }
 
-h1 {
+.title {
     background: #B33636;
 
     width: 350px;
@@ -28,7 +28,7 @@ h1 {
     margin: 18px 0 18px 0;
 }
 
-h1:hover {
+.title:hover {
     background-color: #232020;
 
     border: solid 1px #B33636;

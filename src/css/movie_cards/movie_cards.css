@@ -16,11 +16,28 @@
     align-items: center;
 
     width: 320px;
-    height: 661px;
+    max-height: 661px; height: 661px;
 
     padding: 20px 0 20px 0;
 
     margin: 40px ;
+}
+
+.names-titles {
+    width: 500px;
+    
+    margin-top: 50px;
+    padding-right: 25px;
+    
+    background-color: #B33636;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
 }
 
 .poster {
@@ -43,6 +60,12 @@
 
     font-size: 20px;
     font-weight: 700;
+}
+
+.movie-name {
+    min-height: 48px; max-height: 48px;
+    
+    overflow: hidden;
 }
 
 .text.stars {

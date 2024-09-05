@@ -27,7 +27,6 @@ function Search() {
     const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(query)
     
     setFilme(data.results)
     AppendUrl(data.total_pages)
@@ -39,6 +38,8 @@ function Search() {
 
   return (
     <>
+      <h1 className='names-titles'>Titulos com nome: {query}</h1>
+
       <Cards movies={filme}/>
 
       <BtnPages/>

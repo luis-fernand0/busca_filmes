@@ -9,17 +9,14 @@ import './search_bar_responsive.css'
 
 const SearchBar = () => {
     const [search, setSearch] = useState("")
-    const [searchParams, setSearchParams] = useSearchParams([])
     const navigate = useNavigate()
-
-    const page = searchParams.get(`page`)
 
     const handleSubmit = (e) => {
         e.preventDefault();
         
         if (!search) return
         
-        navigate(`search?query=${search}`)
+        navigate(`search?query=${search}&page=1`)
         setSearch('')
     }
 
