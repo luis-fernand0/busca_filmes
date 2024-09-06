@@ -7,14 +7,13 @@ import '../../css/movie_cards/movie_cards.css'
 import '../../css/responsive/movie_cards_responsive.css'
 
 const Cards = ({movies}) => {
-    const filmes = movies
     const apiImg = import.meta.env.VITE_IMG
 
     return (
         <>
             <ul className='cards'>
 
-                {filmes && filmes.map((movie) =>
+                {movies && movies.map((movie) =>
                     <li className='movies-cards ' key={movie.id}>
                         <Link to={`/movie/${movie.id}`}>
                             <img className='poster' src={`${apiImg}${movie.poster_path}`}
