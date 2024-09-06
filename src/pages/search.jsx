@@ -15,7 +15,7 @@ function Search() {
   const page = searchParams.get(`page`)
   const query = searchParams.get(`query`)
 
-  function AppendUrl (totpage) {
+  function AppendUrl(totpage) {
     const params = new URLSearchParams(searchParams)
     if (totpage === undefined) return
     params.set(`total_pages`, `${totpage}`)
@@ -28,7 +28,13 @@ function Search() {
     const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
-    
+
+    for (let i = 0; i < data.results.length; i++) {
+      if (data.results[i].vote_average === 0 || !data.results[i].poster_path) {
+        console.log(`esse filme n'ao existe`)
+      }
+    }
+
     setFilme(data.results)
     AppendUrl(data.total_pages)
   }
@@ -41,9 +47,9 @@ function Search() {
     <>
       <h1 className='names-titles'>Titulos com nome: {query}</h1>
 
-      <Cards movies={filme}/>
+      <Cards movies={filme} />
 
-      <BtnPages/>
+      <BtnPages />
     </>
   )
 }

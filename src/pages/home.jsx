@@ -26,7 +26,14 @@ const Home = () => {
     const url = `${urlMovies}top_rated?${apiKey}&page=${page}?&language=pt-BR`
     const response = await fetch(url)
     const data = await response.json()
-    
+
+    for (let i = 0; i < data.results.length; i++) {
+      if (data.results[i].vote_average === 0 || !data.results[i].poster_path) {
+        console.log(`esse filme n'ao existe`)
+      }
+    }
+
+    console.log(data.results)
     setTopMovies(data.results)
     AppendUrl (data.total_pages)
   }
