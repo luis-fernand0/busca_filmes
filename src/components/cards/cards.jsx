@@ -14,7 +14,7 @@ const Cards = ({movies}) => {
             <ul className='cards'>
 
                 {movies && movies.map((movie) =>
-                    <li className='movies-cards ' key={movie.id}>
+                    <li className='movies-cards' key={movie.id}>
                         <Link to={`/movie/${movie.id}`}>
                             <img className='poster' src={`${apiImg}${movie.poster_path}`}
                                 alt={`${movie.title} poster`} />
