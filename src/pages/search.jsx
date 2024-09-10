@@ -28,14 +28,21 @@ function Search() {
     const url = `${apiSearch}?query=${query}&page=${page}?&${apiKey}&language=pt-BR&append_to_response=videos,images`
     const response = await fetch(url)
     const data = await response.json()
+    
+    /* 
+      ESSE TRECHO DE CODIGO, EM ESPECIFICO AS LINHAS(36 ATÉ A 43) SERVE COMO UMA CHECAGEM DOS FILMES. QUANDO O USUARIO FAZIA A BUSCA DOS FILMES OCORRIA QUE MOSTRAVA BASTANTE FILMES QUE NA MINHA OPNIÃO NÃO DEVERIAM ESTAR ALI, EXEMPLO: FILMES COM STAR 0 OU FILMES SEM POSTER, MUITAS VEZES ESSES FILMES NÃO TINHAM NADA PARA EXIBIR, NEM SINOPSE, ELENCO, STREAMING E MUITO MENOS TRAILER, ENTÃO OPTEI POR TIRAR ESSES FILMES 
+     */
 
-    for (let i = 0; i < data.results.length; i++) {
-      if (data.results[i].vote_average === 0 || !data.results[i].poster_path) {
-        console.log(`esse filme n'ao existe`)
+    var checkFilmes = [] // AQUI CRIAMOS UM ARRAY VAZIO QUE NOS SERVIRA PARA ARMAZENAR OS FILMES QUE REALMENTE SÃO VALIDOS
+
+    for (let i = 0; i < data.results.length; i++) { // AQUI CRIAMOS UM LAÇO FOR QUE IRA ITERAR SOBRE CADA FILME QUE FOI RETORNADO EM data.results
+      
+      if (data.results[i].vote_average > 0 && data.results[i].poster_path) { // AQUI FAZEMOS A VERIFICAÇÃO DO FILMES, VERIFICAMOS SE O FILME TEM ESTRELAS E SE O FILME TEM ALGUM POSTER
+        checkFilmes.push(data.results[i]) // SE O FILME PASSAR NA VERIFICAÇÃO, ELE VAI SER ADICIONADO DENTRO DO ARRAY
       }
     }
 
-    setFilme(data.results)
+    setFilme(checkFilmes) // AQUI O ARRAY DE FILMES VALIDOS É USADO PARA ATUALIZAR O ESTADO DO COMPONENTE ASSIM EXIBINDO ELES NA TELA
     AppendUrl(data.total_pages)
   }
 
